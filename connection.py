@@ -1,20 +1,21 @@
 #install module pymysql
-#create base from MySQL
+#create database
 #write code for connnection
 #write code for adding in table
 import pymysql
 from pymysql.cursors import DictCursor
 connection = pymysql.connect(
-    host='localhost',
-    user='yourlogin',
-    password='yourpass',
-    db='mydb',
+    host='yourhost',
+    user='yourusername',
+    password='yourpassword',
+    db='yournamedb',
     charset='utf8mb4',
     cursorclass=DictCursor
 )
-addinto = connection.cursor()
+
+addusers = connection.cursor()
 sql = "INSERT INTO users (id, login, password) VALUES (%s, %s,%s)"
 val = ("1","admin","password")
-addinto.execute(sql,val)
+addusers.execute(sql,val)
 connection.commit()
-print(addinto.rowcount, "record inserted.")
+print(addusers.rowcount, "record inserted.")
