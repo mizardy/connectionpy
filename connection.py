@@ -4,9 +4,8 @@
 #write code for adding in table
 
 import pymysql
-from tkinter import *
-from tkinter import messagebox
 from pymysql.cursors import DictCursor
+
 connection = pymysql.connect(
     host='localhost',
     user='admin',

@@ -1,3 +1,5 @@
+from tkinter import *
+from tkinter import messagebox
 root = Tk()
 root.geometry("300x600")
 root.title("Войти в систему Dev5")
